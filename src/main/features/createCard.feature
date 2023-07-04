@@ -3,7 +3,7 @@ Feature: Card Feature
   Background: User already login and create company
     Given user open the webpage
     When user click Gmail button
-    And user input "wennatesting@gmail.com" and "secretbase64."
+    And user input "wennatesting@gmail.com" and "testing234"
     Then user click existing company
 
   Scenario: Verify that user can create HQ card successfully
