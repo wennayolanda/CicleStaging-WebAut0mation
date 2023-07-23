@@ -13,7 +13,9 @@ public class TextBoxSteps {
     @When("user input {string} and {string} in textbox")
     public void userInputAndInTextbox(String companyName, String description) throws InterruptedException {
         TextBox textBox = new TextBox(Hooks.driver);
+        Thread.sleep(500);
         textBox.enterCompanyName(companyName);
+        Thread.sleep(500);
         textBox.enterCompanyDesc(description);
     }
 
@@ -54,5 +56,17 @@ public class TextBoxSteps {
     public void userInputInCheckInsQuestionBox(String text) {
         TextBox que = new TextBox(Hooks.driver);
         que.checkinQuestBox(text);
+    }
+
+    @When("user input blast title {string}")
+    public void userInputBlastTitle(String title) {
+        TextBox text = new TextBox(Hooks.driver);
+        text.blastTitleBox(title);
+    }
+
+    @And("user input blast desc {string}")
+    public void userInputBlastDesc(String desc) {
+        TextBox text = new TextBox(Hooks.driver);
+        text.blastDescBox(desc);
     }
 }

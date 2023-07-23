@@ -5,5 +5,6 @@ Feature: Login
 
   Scenario: user login with valid google email
     Given user click Gmail button
-    When user input "wennatesting@gmail.com" and "testing234"
+    When user input "wennatesting@gmail.com" and "emailtestingnih."
     Then the "Hello and welcome to Cicle!" label is displayed
+

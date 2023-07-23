@@ -62,5 +62,40 @@ public class Label extends PageObject {
             throw new Exception("The alert is not display");
         }
     }
+
+    public void seeYouLaterMessageIsDisplay() throws Exception {
+        try {
+            WebElement findElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[normalize-space()='See you later!']")));
+            findElement.isDisplayed();
+        } catch (NoSuchElementException e) {
+            throw new Exception("The message is not display");
+        }
+    }
+    public void companyLogoIsDisplay() throws Exception {
+        try {
+            WebElement findElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@class='LogoCompanyContainer_logo__2NBrF']")));
+            findElement.isDisplayed();
+        } catch (NoSuchElementException e) {
+            throw new Exception("The company logo is not display");
+        }
+    }
+
+    public void companyNameIsDisplay() throws Exception {
+        try {
+            WebElement findElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[normalize-space()='SQA Ltd']")));
+            findElement.isDisplayed();
+        } catch (NoSuchElementException e) {
+            throw new Exception("The new company name is not display");
+        }
+    }
+
+    public void blastPostIsDisplay() throws Exception {
+        try {
+            WebElement findElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[normalize-space()='First Blast']")));
+            findElement.isDisplayed();
+        } catch (NoSuchElementException e) {
+            throw new Exception("The new blast post is not display");
+        }
+    }
 }
 

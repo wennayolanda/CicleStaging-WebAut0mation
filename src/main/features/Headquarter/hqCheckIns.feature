@@ -3,7 +3,7 @@ Feature: Check-Ins
   Background: User already login and enters check-ins feature
     Given user open the webpage
     When user click Gmail button
-    And user input "wennatesting@gmail.com" and "testing234"
+    And user input "wennatesting@gmail.com" and "secretbase64."
     Then user click existing company
     When user click existing card
     And user click Check-ins menu

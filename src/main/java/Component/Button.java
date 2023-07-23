@@ -123,4 +123,34 @@ public class Button extends PageObject {
         WebElement archive = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='OverlayButton_box__2jFLd']//div[2]")));
         archive.click();
     }
+
+    public void saveCompSett() {
+        WebElement save = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[@type='button'])[1]")));
+        save.click();
+    }
+
+    public void editCompanyBtn() {
+        WebElement edit = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@type='button']")));
+        edit.click();
+    }
+    public void cancelEditCompBtn() {
+        WebElement cancel = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class='Main_container__3r1Cm']//div[@class='Main_iconText__f-xVC Main_iconLight__3jKiU Main_iconPositionStart__IWQqT']//h1[normalize-space()='Cancel']")));
+        cancel.click();
+    }
+
+    public void createBlastBtn() {
+        WebElement blast = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='GlobalActionButton_container__EJ7Lh']")));
+        blast.click();
+    }
+
+    public void publishBlastBtn() {
+        WebElement publish = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[.='Publish']")));
+        publish.click();
+    }
+
+    public void cancelBlastBtn() {
+        WebElement cancel = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'CreateBlastPage_actionSection__cancel__3b0TR')]//button[contains(@type,'button')]")));
+        cancel.click();
+    }
+
 }

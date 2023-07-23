@@ -18,4 +18,14 @@ public class CheckMark extends PageObject {
         WebElement hqCheck = webDriver.findElement(By.xpath("//input[@value='hq']"));
         hqCheck.click();
     }
+
+    public void divBulletCheck() {
+        WebElement divCheck = webDriver.findElement(By.xpath("//input[@value='team']"));
+        divCheck.click();
+    }
+
+    public void projectCheck() {
+        WebElement proCheck = webDriver.findElement(By.xpath("//input[@value='project']"));
+        proCheck.click();
+    }
 }

@@ -15,4 +15,16 @@ public class CheckMarkSteps {
         CheckMark checkMark = new CheckMark(Hooks.driver);
         checkMark.hqBulletCheck();
     }
+
+    @And("user select division checkmark")
+    public void userSelectDivisionCheckmark() {
+        CheckMark checkMark = new CheckMark(Hooks.driver);
+        checkMark.divBulletCheck();
+    }
+
+    @And("user select project checkmark")
+    public void userSelectProjectCheckmark() {
+        CheckMark pro = new CheckMark(Hooks.driver);
+        pro.projectCheck();
+    }
 }

@@ -127,4 +127,41 @@ public class ButtonSteps {
         Button archive = new Button(Hooks.driver);
         archive.archiveQuestion();
     }
+
+    @And("user clicks save company setting button")
+    public void userClicksSaveCompanySettingButton() {
+        Button save = new Button(Hooks.driver);
+        save.saveCompSett();
+    }
+
+    @Then("user click edit company button")
+    public void userClickEditCompanyButton() {
+        Button edit = new Button(Hooks.driver);
+        edit.editCompanyBtn();
+    }
+
+    @And("user clicks cancel company setting button")
+    public void userClicksCancelCompanySettingButton() {
+        Button cancel = new Button(Hooks.driver);
+        cancel.cancelEditCompBtn();
+    }
+
+    @Given("user clicks create blast button")
+    public void userClicksCreateBlastButton() {
+        Button blast = new Button(Hooks.driver);
+        blast.createBlastBtn();
+    }
+
+    @And("user clicks publish blast button")
+    public void userClicksPublishBlastButton() {
+        Button blast = new Button(Hooks.driver);
+        blast.publishBlastBtn();
+    }
+
+    @Then("user clicks cancel blast button")
+    public void userClicksCancelBlastButton() {
+        Button blast = new Button(Hooks.driver);
+        blast.cancelBlastBtn();
+    }
+
 }

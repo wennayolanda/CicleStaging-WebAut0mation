@@ -57,4 +57,34 @@ public class IconSteps {
         Icon editMenu = new Icon(Hooks.driver);
         editMenu.editQuestion();
     }
+
+    @When("user click logout icon")
+    public void userClickLogoutIcon() throws InterruptedException {
+        Icon logout = new Icon(Hooks.driver);
+        logout.logoutIcon();
+    }
+
+    @Given("when user click on the company setting icon")
+    public void whenUserClickOnTheCompanySettingIcon() {
+        Icon setting = new Icon(Hooks.driver);
+        setting.compSettingIcon();
+    }
+
+    @And("user click create team card icon")
+    public void userClickCreateTeamCardIcon() {
+        Icon create = new Icon(Hooks.driver);
+        create.createTeamIcon();
+    }
+
+    @And("user clicks calendar icon")
+    public void userClicksCalendarIcon() {
+        Icon calendar = new Icon(Hooks.driver);
+        calendar.calendarIcon();
+    }
+    @And("user clicks calendar icon and set due date")
+    public void userClicksCalendarIconAndSetDueDate() {
+        Icon calendar = new Icon(Hooks.driver);
+        calendar.calendarIcon();
+        calendar.dueDateBlast();
+    }
 }
