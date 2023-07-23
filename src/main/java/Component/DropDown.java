@@ -19,4 +19,9 @@ public class DropDown extends PageObject {
         WebElement dropDown = webDriver.findElement(By.xpath("/div[@class='Message_iconOption__3F-Ru']//*[name()='svg']//*[name()='path' and contains(@d,'M16.59 8.5')]"));
         dropDown.click();
     }
+
+    public void blastDropDown() {
+        WebElement blast = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Auto complete')]")));
+        blast.click();
+    }
 }

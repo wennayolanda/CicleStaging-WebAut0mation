@@ -45,4 +45,22 @@ public class MenuSteps {
         Menu check = new Menu(Hooks.driver);
         check.checkinsPost();
     }
+
+    @And("user clicks Blast menu")
+    public void userClicksBlastMenu() {
+        Menu blast = new Menu(Hooks.driver);
+        blast.blastMenu();
+    }
+
+    @When("user click existing division card")
+    public void userClickExistingDivisionCard() {
+        Menu divcard = new Menu(Hooks.driver);
+        divcard.cardDivision();
+    }
+
+    @When("user click existing projects card")
+    public void userClickExistingProjectsCard() {
+        Menu pro = new Menu(Hooks.driver);
+        pro.cardProject();
+    }
 }

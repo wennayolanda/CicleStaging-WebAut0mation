@@ -46,4 +46,28 @@ public class LabelSteps {
         Thread.sleep(3000);
         alert.alertMessageIsDisplay();
     }
+
+    @Then("the See you later! label is displayed")
+    public void theSeeYouLaterLabelIsDisplayed() throws Exception {
+        Label later = new Label(Hooks.driver);
+        later.seeYouLaterMessageIsDisplay();
+    }
+
+    @Then("the company logo is display")
+    public void theCompanyLogoIsDisplay() throws Exception {
+        Label logo = new Label(Hooks.driver);
+        logo.companyLogoIsDisplay();
+    }
+
+    @Then("company name is display")
+    public void companyNameIsDisplay() throws Exception {
+        Label comp = new Label(Hooks.driver);
+        comp.companyNameIsDisplay();
+    }
+
+    @Then("First Blast is appear")
+    public void firstBlastIsAppear() throws Exception {
+        Label first = new Label(Hooks.driver);
+        first.blastPostIsDisplay();
+    }
 }

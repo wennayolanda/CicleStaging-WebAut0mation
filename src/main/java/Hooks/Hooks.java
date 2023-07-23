@@ -27,10 +27,10 @@ public class Hooks {
         wait = new WebDriverWait(driver, duration);
     }
 
-    @After
-    public void teardown() {
-        driver.quit();
-    }
+//    @After
+//    public void teardown() {
+//        driver.quit();
+//    }
 
 
 }

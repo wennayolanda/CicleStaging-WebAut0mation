@@ -1,10 +1,8 @@
 package Component;
 
 import Hooks.Hooks;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import Object.PageObject;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -23,12 +21,16 @@ public class TextBox extends PageObject {
     }
     public void enterCompanyName(String name) {
         WebElement textBox = webDriver.findElement(By.xpath("//input[@name='name']"));
+        JavascriptExecutor js = (JavascriptExecutor) webDriver;
+        js.executeScript("arguments[0].value = '';", textBox);
         textBox.sendKeys(name);
     }
 
     public void enterCompanyDesc(String desc) {
-        WebElement enterCompDesc = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//textarea[@name='desc']")));
-        enterCompDesc.sendKeys(desc);
+        WebElement textBox = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//textarea[@name='desc']")));
+        JavascriptExecutor js = (JavascriptExecutor) webDriver;
+        js.executeScript("arguments[0].value = '';", textBox);
+        textBox.sendKeys(desc);
     }
 
     public void enterHqDesc(String desc) {
@@ -63,5 +65,15 @@ public class TextBox extends PageObject {
     public void checkinQuestBox(String text) {
         WebElement queBox = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Type your question..']")));
         queBox.sendKeys(text);
+    }
+
+    public void blastTitleBox(String text) {
+        WebElement title = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='CreateBlastPage_inputTitleSection__3vhfz']/textarea[1]")));
+        title.sendKeys(text);
+    }
+
+    public void blastDescBox(String text) {
+        WebElement desc = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='fr-element fr-view']/p[1]")));
+        desc.sendKeys(text);
     }
 }

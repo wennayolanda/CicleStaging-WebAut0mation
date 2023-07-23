@@ -53,4 +53,29 @@ public class Icon extends PageObject {
         editQue.click();
     }
 
+    public void logoutIcon() {
+        WebElement icon = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@aria-label='Logout']//div[@class='IconItem_container__2XsfF']")));
+        icon.click();
+    }
+
+    public void compSettingIcon() {
+        WebElement icon = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@class='LinkNoDecor_Link__3DEkL']//div[@class='HomeSubNavHeader_title__settings__E2BgT']//*[name()='svg']")));
+        icon.click();
+    }
+
+    public void createTeamIcon() {
+        WebElement plus = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='CreateTeamButton_buttonContainer__Xb_dp']")));
+        plus.click();
+    }
+
+    public void calendarIcon() {
+        WebElement calendar = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-slyssw']")));
+        calendar.click();
+    }
+
+    public void dueDateBlast() {
+        WebElement due = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='cell']//button[normalize-space()='21']")));
+        due.click();
+    }
+
 }
